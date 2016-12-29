@@ -6,8 +6,10 @@ import routes from './routers';
 import Alert from './libs/alert';
 import store from './vuex/user';
 import FastClick from 'fastclick';
+import vueresource from 'vue-resource';
 Vue.use(VueRouter);
 Vue.use(Alert);
+Vue.use(vueresource);
 
 $.ajaxSettings.crossDomain = true;
 
