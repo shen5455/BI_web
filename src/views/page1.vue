@@ -1,19 +1,30 @@
 <template>
-	<h1>page 1 {{data}}</h1>
+    <div>
+        <h1>page 1 {{data}}</h1>
+        <mt-checklist
+          title="checkbox list"
+          v-model="value"
+          :options="['optionA', 'optionB', 'optionC']">
+        </mt-checklist>
+    </div>
 </template>
 <script>
 import nvHead from '../components/header.vue';
+import { Checklist } from 'mint-ui';
 require('../assets/scss/CV.scss');
 require('../assets/scss/iconfont/iconfont.css');
 require('../assets/scss/github-markdown.css');
 
 export default {
     components: {
-        nvHead
+        nvHead,
+        Checklist
     },
     data() {
         return {
-            data: []
+            data: [],
+            single: false,
+            value: ['11', '22', '33']
         };
     },
     mounted() {

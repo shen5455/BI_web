@@ -7,9 +7,11 @@ import Alert from './libs/alert';
 import store from './vuex/user';
 import FastClick from 'fastclick';
 import vueresource from 'vue-resource';
+import Mint from 'mint-ui';
 Vue.use(VueRouter);
 Vue.use(Alert);
 Vue.use(vueresource);
+Vue.use(Mint);
 
 $.ajaxSettings.crossDomain = true;
 
